@@ -48,7 +48,7 @@ build_script:
 
 after_build:
   - ps: Write-Host $("`n               PACKING UP               `n") -BackgroundColor DarkCyan
-  - dotnet pack -c Release src\Stripe.net
+  - dotnet pack -c Release src\Stripe.net -v diag
 
 test_script:
   - ps: Write-Host $("`n               RUNNING TESTS               `n") -BackgroundColor DarkCyan
